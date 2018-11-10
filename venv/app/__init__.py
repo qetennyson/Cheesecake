@@ -5,14 +5,14 @@ from config import Config
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_login import LoginManager
-# from flask_mail import Mail
+from flask_mail import Mail
 from flask_bootstrap import Bootstrap
 
 # The actual instance of Flask and a member of the app package.
 app = Flask(__name__)
 
-# TODO work on mail.
-# mail = Mail(app)
+
+mail = Mail(app)
 
 bootstrap = Bootstrap(app)
 
