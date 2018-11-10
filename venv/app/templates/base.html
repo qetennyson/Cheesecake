@@ -2,7 +2,7 @@
 
 {% block title %}
     {% if title %}
-    <title>{{ title }} - Cheesecake</title>
+    {{ title }} - Cheesecake
     {% else %}
     <title>Welcome to Cheesecake</title>
     {% endif %}
@@ -57,4 +57,9 @@
     <!-- Derived templates will insert themselves here. !-->
     {% block app_content %}{% endblock %}
     </div>
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    {{ moment.include_moment() }}
 {% endblock %}

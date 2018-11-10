@@ -3,7 +3,7 @@ import os
 # basic local SQlite DB
 basedir = os.path.abspath(os.path.dirname(__file__))
 
-class Config:
+class Config(object):
     # using a constant here to store this secret key value
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'you-will-never-guess'
 
@@ -21,4 +21,9 @@ class Config:
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
     ADMINS = ['quincytennyson8@gmail.com']
 
+    # Max Posts Shown
     POSTS_PER_PAGE = 25
+
+    # Language Support
+    LANGUAGES = ['en-US', 'es']
+
